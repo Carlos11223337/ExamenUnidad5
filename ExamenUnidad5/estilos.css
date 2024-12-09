@@ -1,0 +1,115 @@
+body {
+    background-color: mediumblue;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.2em;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+/* Estilos para header y footer */
+header, footer {
+    color: purple;
+    background-color: #aeaca8;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    color: white;
+    font-family: 'Rambla', sans-serif;
+    font-size: 1.1em;
+}
+
+/* Botón de acción */
+button {
+    font-size: 1em;
+    width: auto;
+    height: 40px;
+    background-color: orange;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Contenedor de secciones con grid */
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "a1 a1 a2 a2"
+                         "a3 a3 a4 a4"
+                         "a5 a5 a6 a6";
+    width: 100%;
+    height: 100%;
+    gap: 10px; /* Espaciado entre los elementos de la grid */
+}
+
+/* Secciones con borde redondeado y color */
+section {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.problema, .esquemaProblema, .datos, .formulas, .calculos, .resultado {
+    padding: 15px; /* Añadido espaciado interno */
+}
+
+/* Colores específicos para cada sección */
+.problema {
+    background-color: #094293;
+    color: gold;
+}
+
+.esquemaProblema {
+    background-color: blue;
+}
+
+.imgProblema {
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.datos {
+    background-color: red;
+}
+
+.formulas {
+    background-color: orangered;
+}
+
+.calculos {
+    background-color: indigo;
+    color: white;
+}
+
+.resultado {
+    background-color: mediumvioletred;
+}
+
+/* Estilos de footer */
+footer {
+    font-size: 0.8em;
+}
+
+/* Reajuste de grid para dispositivos pequeños */
+@media (max-width: 768px) {
+    #contenedor {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        grid-template-areas: 
+            "a1"
+            "a2"
+            "a3"
+            "a4"
+            "a5"
+            "a6";
+    }
+}
